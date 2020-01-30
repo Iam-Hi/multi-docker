@@ -14,7 +14,7 @@ after_success:
   - docker build -t iamhi/multi-server ./server
   - docker build -t iamhi/multi-worker ./worker
   - docker build -t iamhi/multi-nginx ./nginx
-  - echo "$DOCKER_PASSOWRD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
   - docker push iamhi/multi-client
   - docker push iamhi/multi-server
   - docker push iamhi/multi-worker
