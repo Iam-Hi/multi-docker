@@ -1,6 +1,6 @@
 # SPECIFY BASE IMAGE
 FROM node:alpine as builder
-WORKDIR /usr/react-client
+WORKDIR /app
 
 # Dependencies
 COPY ./package.json ./
